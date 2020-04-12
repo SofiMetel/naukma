@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="uk">
+  <meta charset="UTF-8">
+  <title>Buy List</title>
+  <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+
+<body>
+  <div class="background">
+    <div class="container">
+      <div class=" left">
+        <div class="inner">
+          <div class="segment form">
+            <input class="input" type="text" placeholder="Назва товару" width="100%">
+            <button data-tooltip="Додати новий продукт" class="button add">Додати</button>
+          </div>
+          <div class="list-of-items">
+            <template id="product-template">
+              <div class="list-element">
+                <div class="name-cell">
+                  <span data-class="edit-mode" id="name" class="name">Назад</span>
+                  <input id="edit" class="input-edit" type="text" width="100%" style="display: none">
+                </div>
+                <div class="central-cell">
+                  <button data-tooltip="Менше" id="minus" class="button round minus red">
+                    —
+                  </button>
+                  <div class="quantity-count">1</div>
+                  <button data-tooltip="Більше" id="plus" class="button round plus green">
+                    +
+                  </button>
+                </div>
+                <div class="right-cell">
+                  <button data-tooltip="Додати до купленого" class="button bought">Куплено</button>
+                  <button data-tooltip="Видалити із списку" class="button red delete-button">
+                    x </button>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+      </div>
+      <div class=" right">
+        <div class="inner">
+          <div class=" segment text">
+            <h3 style="margin: 0">Залишилося</h3>
+          </div>
+          <div class="segment items-left">
+            <div class="products-holder">
+              <template class="preview-template">
+                <div class="product">
+                  <div class="label">Помідори</div>
+                  <div class="orange">1</div>
+                </div>
+              </template>
+            </div>
+          </div>
+          <div class=" segment text">
+            <h3 style="margin: 0;">Куплено</h3>
+          </div>
+          <div class=" segment items-bought">
+            <template class="preview-template">
+              <div class="product">
+                <div class="label">Помідори</div>
+                <div class="orange">1</div>
+              </div>
+            </template>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="badge">
+    <p class="badge-name">BuyList</p>
+    <p class="Myname"> Created by Sofia Metel</p>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>
